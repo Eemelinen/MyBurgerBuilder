@@ -6,7 +6,14 @@ During the course I have been developing a burger builder based on guidance give
 
 During the project I have learned a lot about basic functionality of React and ES6 in general.
 
-In the web app you can order your own burger. You can add different ingredients, remove them, cjeckout the price in real time and of course make an order.
+In the web app you can order your own burger. You can add different ingredients, remove them, checkout the price in real time and of course make an order. The app is being develop according to mobile first principles.
+
+Current functionality:
+- Mobile and desktop friendly
+- Add ingedients
+- See the price in real time
+- Enter order confirmatiob page (Clicking order button gives just an alarm)
+
 
 Firebase servers as the backend for the orders made.
 
