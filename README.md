@@ -1,4 +1,4 @@
-## Welcome!
+## Welcome to my Burger Builder!
 
 I have been working on this project as a part of Udemy course called: React: The complete guide.
 
