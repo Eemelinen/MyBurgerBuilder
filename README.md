@@ -10,6 +10,9 @@ In the web app you can order your own burger. You can add different ingredients,
 
 Firebase servers as the backend for the orders made.
 
+You can checkout the app here:
+https://burgerbuildereemelinen.herokuapp.com/
+
 
 ****************************************************************************************
 
