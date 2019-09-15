@@ -14,7 +14,7 @@ I'm still actively working on this project. However, you can check the current p
 
 https://burgerbuildereemelinen.herokuapp.com/
 
-##(Loading heroku might take a moment)
+<h3>(Loading heroku might take a moment)</h3>
 
 ****************************************************************************************
 
