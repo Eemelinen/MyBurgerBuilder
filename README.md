@@ -10,6 +10,10 @@ In the web app you can order your own burger. You can add different ingredients,
 
 Firebase servers as the backend for the orders made.
 
+
+****************************************************************************************
+
+
 ### REACT
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
