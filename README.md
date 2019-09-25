@@ -1,12 +1,12 @@
 ## Welcome to my Burger Builder!
 
-I have been working on this project as a part of Udemy course called: React: The complete guide.
+I have been working on this project as a part of Udemy course called: React: The complete guide by Maximillian Swarzhmuller.
 
 https://www.udemy.com/react-the-complete-guide-incl-redux/
 
-During the course I have been developing a burger builder based on guidance given by the Udemy teacher Maximillian Swarzhmuller.
+During the course I have been developing a burger builder based on guidance given by the teacher, so the idea and consept are not my own.
 
-During the project I have learned a lot about basic functionality of React and ES6 in general.
+The project has taught me a lot about basic functionality of React and ES6 in general.
 
 In the web app you can order your own burger. You can add different ingredients, remove them, checkout the price in real time and of course make an order. The app is being develop according to mobile first principles.
 
