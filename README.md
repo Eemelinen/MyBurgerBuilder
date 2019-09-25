@@ -2,7 +2,9 @@
 
 I have been working on this project as a part of Udemy course called: React: The complete guide.
 
-During the course I have been developing a burger builder based on guidance given by the teacher Maximillian Swarzhmuller.
+https://www.udemy.com/react-the-complete-guide-incl-redux/
+
+During the course I have been developing a burger builder based on guidance given by the Udemy teacher Maximillian Swarzhmuller.
 
 During the project I have learned a lot about basic functionality of React and ES6 in general.
 
