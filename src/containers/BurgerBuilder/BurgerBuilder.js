@@ -8,6 +8,7 @@ import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 import axios from '../../axios-orders';
 import Spinner from '../../components/layout/UI/Spinner/Spinner';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
+import Checkout from '../Checkout/Checkout';
 
 const INGREDIENT_PRICES = {
     salad: 0.5,
@@ -33,6 +34,8 @@ class BurgerBuilder extends Component {
         .then(response => {
             this.setState({ingredients: response.data});
             console.log(response)
+            console.log(this.state.ingredients)
+
         })
         .catch(error => {
             this.setState({error: true});
@@ -179,6 +182,12 @@ class BurgerBuilder extends Component {
         }
 
         let orderSummary = null;
+
+        // let checkout = <Spinner />
+
+        // if(this.state.ingredients) {
+        //     checkout = <Checkout ingredients={this.state.ingredients} />
+        // }
 
         let burger = <Spinner />
 
