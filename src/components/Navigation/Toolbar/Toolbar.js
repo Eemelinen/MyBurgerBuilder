@@ -14,7 +14,7 @@ const toolbar = ( props ) => (
         <nav className={classes.DesktopOnly}>
             <Navigation
                 navItemName1='Burger Builder'
-                navItemName2='Checkout'
+                navItemName2='Orders'
             />
         </nav>
     </div>

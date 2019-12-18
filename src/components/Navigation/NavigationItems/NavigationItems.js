@@ -6,12 +6,11 @@ const navigationItems = ( props ) => (
 
     <ul className={classes.NavItems}>
         <NavItem
-            link="/"
-            active>
+            link="/">
             {props.navItemName1}
         </NavItem>
         <NavItem
-            link="/checkout">
+            link="/orders">
             {props.navItemName2}
         </NavItem>
     </ul>

@@ -25,7 +25,6 @@ class ContactForm extends Component {
                 [e.target.name]: e.target.value
             // }
         })
-        console.log(this.state)
     }
 
     formSubmitHandler = (e) => {
