@@ -8,7 +8,7 @@ import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 import axios from '../../axios-orders';
 import Spinner from '../../components/layout/UI/Spinner/Spinner';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
-import Checkout from '../Checkout/Checkout';
+// import Checkout from '../Checkout/Checkout';
 
 const INGREDIENT_PRICES = {
     salad: 0.5,
@@ -25,8 +25,6 @@ class BurgerBuilder extends Component {
         totalPrice: 5,
         purchaseable: false,
         purchaseModal: false,
-        loading: false,
-        purchasing: false,
         error: false,
     }
 
@@ -116,58 +114,25 @@ class BurgerBuilder extends Component {
     modalClosedHandler = () => {
         this.setState({
             purchaseModal: false,
-            purchasing: false
         });
     }
 
     continueClickedHandler = () => {
 
-        this.setState({ loading: true });
+        const urlQueryParams = [];
 
-        // alert('You clicked continue!')
-        // .json is used only for firebase projects. For other projects another sort of endpoint might be required.
-        const order = {
-            ingredients: this.state.ingredients,
-            // In future this price should be calculated on server.
-            price: this.state.totalPrice,
-            // Customer details to be added dynamically later
-            customer: {
-                name: 'Emilio Surkka',
-                adress: {
-                    street: 'Soltunkatu 10',
-                    city: 'Helsinki',
-                    country: 'Finland',
-                },
-                email: 'burgerbuilder@bb.com',
-            },
-            deliverymethod: 'express'
-        };
+        for(let i in this.state.ingredients) {
+            urlQueryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]))
+        }
 
-        // Order gets sent to the firebase. Response (or error) gets logged to console.
-        axios.post('/orders.json', order)
-            .then(response => {
-                console.log(response)
-                this.setState({
-                    loading: false,
-                    purchaseModal: false,
-                    // ingredients: {
-                    //     salad: 0,
-                    //     bacon: 0,
-                    //     cheese: 0,
-                    //     meat: 1,
-                    // },
-                    totalPrice: 5,
-                });
-                this.fetchIngredientData();
-            })
-            .catch(error => {
-                console.log(error);
-                this.setState({
-                    loading: false,
-                    purchaseModal: false,
-                    // errorMessage: true,
-                });
-            });
+        urlQueryParams.push('price=' + this.state.totalPrice)
+
+        const queryString = urlQueryParams.join('&');
+
+        this.props.history.push({
+            pathname: '/checkout',
+            search: '?' + queryString
+        })
 
     };
 

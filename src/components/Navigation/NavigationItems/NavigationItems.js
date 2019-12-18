@@ -11,7 +11,7 @@ const navigationItems = ( props ) => (
             {props.navItemName1}
         </NavItem>
         <NavItem
-            link="/">
+            link="/checkout">
             {props.navItemName2}
         </NavItem>
     </ul>
