@@ -23,7 +23,7 @@ class BurgerBuilder extends Component {
 
         ingredients: null,
         totalPrice: 5,
-        purchaseable: false,
+        purchaseable: true,
         purchaseModal: false,
         error: false,
     }
@@ -31,8 +31,8 @@ class BurgerBuilder extends Component {
     fetchIngredientData = () => { axios.get('https://burgerbuilder-7d0bf.firebaseio.com/ingredients.json')
         .then(response => {
             this.setState({ingredients: response.data});
-            console.log(response)
-            console.log(this.state.ingredients)
+            // console.log(response)
+            // console.log(this.state.ingredients)
 
         })
         .catch(error => {

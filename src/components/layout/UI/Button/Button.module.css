@@ -6,7 +6,7 @@
     cursor: pointer;
     font: inherit;
     padding: 10px;
-    margin: 10px;
+    margin: 15px;
     font-weight: bold;
 }
 
@@ -21,4 +21,9 @@
 
 .Danger {
     color: #944317;
+}
+
+.Button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
 }

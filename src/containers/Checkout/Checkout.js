@@ -31,7 +31,7 @@ class Checkout extends Component {
             ingredients: ingredients,
             price: price
         })
-        console.log(ingredients)
+        // console.log(ingredients)
     }
 
     cancelClickedHandler = () => {
