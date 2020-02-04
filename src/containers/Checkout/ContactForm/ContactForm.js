@@ -4,6 +4,7 @@ import Button from '../../../components/layout/UI/Button/Button';
 import classes from './ContactForm.module.css';
 import Spinner from '../../../components/layout/UI/Spinner/Spinner';
 import Input from '../../../components/layout/UI/Form/Input/Input';
+import { connect } from 'react-redux';
 
 class ContactForm extends Component {
 
@@ -166,7 +167,7 @@ class ContactForm extends Component {
 
         const order = {
             price: Number.parseFloat(this.props.price).toFixed(2),
-            ingredients: this.props.ingredients,
+            ingredients: this.props.ings,
             DeliveryDetails: {},
         };
 
@@ -241,4 +242,11 @@ class ContactForm extends Component {
     }
 }
 
-export default ContactForm;
+const mapStateToProps = state => {
+    return {
+        ings: state.ingredients,
+        price: state.totalPrice
+    }
+}
+
+export default connect(mapStateToProps, null)(ContactForm);
