@@ -15,9 +15,9 @@ export const onIngredientRemoved = (name) => {
     };
 };
 
-export const setIngredient = ( ingredients ) => {
+export const setIngredients = ( ingredients ) => {
     return {
-        type: actionTypes.SET_INGREDIENT,
+        type: actionTypes.SET_INGREDIENTS,
         ingredients: ingredients
     }
 }
@@ -32,7 +32,7 @@ export const initIngredients = () => {
     return dispatch => {
         axios.get('https://burgerbuilder-7d0bf.firebaseio.com/ingredients.json')
             .then(response => {
-                dispatch(setIngredient(response.data));
+                dispatch(setIngredients(response.data));
             })
             .catch(error => {
                 dispatch(fetchIngredientsFailed());

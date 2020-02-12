@@ -5,6 +5,9 @@ import classes from './ContactForm.module.css';
 import Spinner from '../../../components/layout/UI/Spinner/Spinner';
 import Input from '../../../components/layout/UI/Form/Input/Input';
 import { connect } from 'react-redux';
+import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
+import actionTypes from '../../../store/actions/actionTypes';
+import * as orderActions from '../../../store/actions/index';
 
 class ContactForm extends Component {
 
@@ -163,8 +166,6 @@ class ContactForm extends Component {
     formSubmitHandler = (e) => {
         e.preventDefault();
 
-        this.setState({ loading: true });
-
         const order = {
             price: Number.parseFloat(this.props.price).toFixed(2),
             ingredients: this.props.ings,
@@ -174,22 +175,9 @@ class ContactForm extends Component {
         for (let valueName in this.state.orderConfig) {
             order.DeliveryDetails[valueName] = this.state.orderConfig[valueName].value
         }
+        
+        this.props.onPurchaseBurgerStart(order)
 
-        // Order gets sent to the firebase. Response (or error) gets logged to console.
-        axios.post('/orders.json', order)
-            .then(response => {
-                console.log(response)
-                this.setState({
-                    loading: false
-                })
-                this.props.history.push('/')
-            })
-            .catch(error => {
-                console.log(error);
-                this.setState({
-                    loading: false,
-                });
-            });        
     }
 
     render() {
@@ -249,4 +237,10 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, null)(ContactForm);
+const mapDispatchToProps = dispatch => {
+    return {
+        onPurchaseBurgerStart: (orderData) => dispatch(orderActions.purchaseBurgerStart(orderData)) 
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(ContactForm, axios));
