@@ -29,6 +29,8 @@ class BurgerBuilder extends Component {
         purchaseModal: false,
     }
 
+    test = () => {}
+
     addIngredientHandler = ( type ) => {
 
         const oldCount = this.state.ingredients[type];
