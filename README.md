@@ -4,6 +4,10 @@ I have been working on this project as a part of Udemy course called: React: The
 
 https://www.udemy.com/react-the-complete-guide-incl-redux/
 
+![bb](https://user-images.githubusercontent.com/37372229/94792407-382a1280-03d9-11eb-9c65-7fa495f58971.PNG)
+![check](https://user-images.githubusercontent.com/37372229/94792415-395b3f80-03d9-11eb-978c-2c1f2f0fb10a.PNG)
+![contact](https://user-images.githubusercontent.com/37372229/94792417-3a8c6c80-03d9-11eb-90f5-a9bec47cd3a2.PNG)
+
 During the course I have been developing a burger builder based on guidance given by the teacher, so the idea and consept are not my own.
 
 The project has taught me a lot about basic functionality of React and ES6 in general.
@@ -27,7 +31,6 @@ https://burgerbuildereemelinen.herokuapp.com/
 
 
 ****************************************************************************************
-
 
 ### REACT
 
